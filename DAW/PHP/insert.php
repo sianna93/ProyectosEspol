@@ -1,12 +1,12 @@
 <?php
-  $con=mysqli_connect("localhost","root","","daw");
+  $con=mysqli_connect("localhost","root","sianna","daw");
   //Check conection
   //echo"aqui";
   if(mysqli_connect_error())
   {
       echo"Failed to connect to MySql: " .mysqli_connect_error();
   }else{echo"conectada";}  
-  $sql="INSERT INTO Persona (firstname, lastname, age)
+  $sql="INSERT INTO persona (firstname, lastname, age)
   VALUES  ('$_POST[firstname]','$_POST[lastname]','$_POST[age]')";
 
   if(!mysqli_query($con,$sql)){
